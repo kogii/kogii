@@ -13,7 +13,8 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.6.4'
 gem 'bootsnap', require: false
 group :development, :test do
-    gem 'sqlite3', '1.4.1'
+    #gem 'sqlite3', '1.4.1'
+    gem 'sqlite3', '1.3.13' #アコーディオンのためにこのバージョン
     gem 'byebug', '~> 9.0', '>= 9.0.6', platform: [:mri, :mingw, :x64_mingw]
 end
 
@@ -38,3 +39,11 @@ end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#時間割表示のときに使うやつ(gotuが追加)
+# Materializecssの導入
+gem 'materialize-sass', '~> 1.0.0'
+# Materializeのアイコンの導入
+gem 'material_icons'
+gem 'activeadmin'
+gem 'devise'
