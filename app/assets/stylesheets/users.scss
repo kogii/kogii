@@ -1,3 +1,49 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+cp_table *, .cp_table *:before, .cp_table *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.cp_table {
+	width: 100%;
+	border-collapse: collapse;
+	border-right: 1px solid #dddddd;
+}
+.cp_table thead th {
+	padding: 10px 15px;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background: #dddddd;
+}
+.cp_table thead th:last-child {
+	border-right: 1px solid #dddddd;
+}
+.cp_table tbody th {
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #ffffff;
+	background: #dddddd;
+	white-space: nowrap;
+}
+.cp_table tbody tr:last-child th {
+	border-bottom: 1px solid #dddddd;
+}
+.cp_table tbody td {
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	background: #ffffff;
+}
+@media only screen and (max-width:480px) {
+	.cp_table thead {
+		display: none;
+	}
+	.cp_table tbody th {
+		display: block;
+	}
+}
+
+
+
