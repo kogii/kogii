@@ -32,9 +32,12 @@ Rails.application.configure do
 
     # Don't care if the mailer can't send.
     config.action_mailer.raise_delivery_errors = false
-    config.action_mailer.delivery_method = :test
-    host = 'localhost:3000' # ここは自分のテスト環境を使うi
-    config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+    #config.action_mailer.delivery_method = :test
+    host = 'localhost:3000' # ここは自分のテスト環境を使う
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    config.action_mailer.delivery_method = :smtp
+    #config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+    config.action_mailer.smtp_settings = { :address => 'localhost', port: 1025 }
     config.action_mailer.perform_caching = false
 
     # Print deprecation notices to the Rails logger.
