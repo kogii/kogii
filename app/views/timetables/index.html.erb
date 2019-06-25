@@ -1,0 +1,112 @@
+
+<h1>芝浦工業大学 時間割</h1>
+
+<table class="cp_table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>月曜日</th>
+      <th>火曜日</th>
+      <th>水曜日</th>
+      <th>木曜日</th>
+      <th>金曜日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
+      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<ul class="collapsible expandable">
+    <li>
+      <div class="collapsible-header"></i>月曜日</div>
+      <% @mondays.each do |monday| %>
+        <div class="collapsible-body"><span>
+          <%= monday.name %>
+          <%= monday.term %>
+          <%= monday.genre %>
+          </span></div>
+      <% end %>
+    </li>
+    <li>
+      <div class="collapsible-header"></i>火曜日</div>
+      <% @tuesdays.each do |tuesday| %>
+        <div class="collapsible-body"><span>
+          <%= tuesday.name %>
+          <%= tuesday.term %>
+          <%= tuesday.genre %>
+          </span></div>
+      <% end %>
+    </li>
+    <li>
+      <div class="collapsible-header"></i>水曜日</div>
+      <% @wednesdays.each do |wednesday| %>
+        <div class="collapsible-body"><span>
+          <%= wednesday.name %>
+          <%= wednesday.term %>
+          <%= wednesday.genre %>
+          </span></div>
+      <% end %>
+    </li>
+    <li>
+      <div class="collapsible-header"></i>木曜日</div>
+      <% @thursdays.each do |thursday| %>
+        <div class="collapsible-body"><span>
+          <%= thursday.name %>
+          <%= thursday.term %>
+          <%= thursday.genre %>
+          </span></div>
+      <% end %>
+    </li>
+    <li>
+      <div class="collapsible-header"></i>金曜日</div>
+      <% @fridays.each do |friday| %>
+        <div class="collapsible-body"><span>
+          <%= friday.name %>
+          <%= friday.term %>
+          <%= friday.genre %>
+          </span></div>
+      <% end %>
+    </li>
+</ul>
+
