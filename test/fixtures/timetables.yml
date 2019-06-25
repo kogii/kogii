@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  day: MyString
+  period: 1
+  term: MyString
+  genre: MyString
+
+two:
+  name: MyString
+  day: MyString
+  period: 1
+  term: MyString
+  genre: MyString
