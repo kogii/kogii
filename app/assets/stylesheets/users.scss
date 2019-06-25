@@ -12,7 +12,7 @@ cp_table *, .cp_table *:before, .cp_table *:after {
 }
 .cp_table thead th {
 	padding: 10px 15px;
-	border-right: 1px solid #ffffff;
+	border-right: 1px solid #ffff00;
 	border-bottom: 1px solid #ffffff;
 	background: #dddddd;
 }
@@ -22,7 +22,7 @@ cp_table *, .cp_table *:before, .cp_table *:after {
 .cp_table tbody th {
 	padding: 10px 15px;
 	vertical-align: top;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid #ffff00;
 	background: #dddddd;
 	white-space: nowrap;
 }
@@ -34,7 +34,7 @@ cp_table *, .cp_table *:before, .cp_table *:after {
 	vertical-align: top;
 	border-bottom: 1px solid #dddddd;
 	border-left: 1px solid #dddddd;
-	background: #ffffff;
+	background: #bde9ba;
 }
 @media only screen and (max-width:480px) {
 	.cp_table thead {
@@ -44,6 +44,3 @@ cp_table *, .cp_table *:before, .cp_table *:after {
 		display: block;
 	}
 }
-
-
-
