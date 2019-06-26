@@ -11,7 +11,7 @@
 $gray-medium-light: #eaeaea;
 /* universal */
 body {
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 section {
@@ -23,7 +23,11 @@ textarea {
 }
 
 .center {
+    left: 200px;
+    bottom: 260px;
+    background-color: rgba(0,0,0,0.4);
     text-align: center;
+    position: absolute;
     h1 {
         margin-bottom: 10px;
     }
@@ -38,10 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 8em;
     letter-spacing: -2px;
-    margin-bottom: 30px;
+    margin-bottom: 120px;
     text-align: center;
+    color: $gray-light;
 }
 
+.center h1 {
+    color: white;
+    margin-bottom: 80px;
+}
 
 h2 {
     font-size: 1.2em;
@@ -49,12 +58,13 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: $gray-light;
+    color: $gray-darker;
 }
 
-p {
-    font-size: 2.0em;
-    line-height: 1.7em;
+img {
+    vertical-align: bottom;
+    font-size: 4.0em;
+    line-height: 2.0em;
 }
 
 /* header */
