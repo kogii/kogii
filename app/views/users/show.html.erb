@@ -3,8 +3,14 @@
     <aside class="col-md-4">
         <section class="user_info">          
             <h1>
-                <%= @user.image %>
-                <%= @user.name %>
+                <%= form_for(@user, url: yield(:url)) do |f| %>
+                    <%= @user.name %>
+                    <% if @user.image? %>
+                        <%= image_tag @user.image.url, :size => '160x160' %>
+                    <% else %>
+                        <%= image_tag "default.jpg", :size =>'160x160' %>
+                    <% end %>
+                <% end %>
             </h1>
         </section>
     </aside>
