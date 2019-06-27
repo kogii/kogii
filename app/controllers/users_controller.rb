@@ -28,14 +28,16 @@ class UsersController < ApplicationController
     end
 
     def edit
+        @user = User.find(params[:id])
     end
 
     def update
         if @user.update_attributes(user_params)
-            flash[:success] = "Profile updated"
+            flash[:success] = 'ユーザー情報を編集しました。'
             redirect_to @user
         else
             render 'edit'
+            flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
         end
     end
 
@@ -49,7 +51,7 @@ class UsersController < ApplicationController
 
         def user_params
             params.require(:user).permit(:name, :email, :password, 
-                                        :password_confirmation)
+                                        :password_confirmation, :image)
             
         end
 
