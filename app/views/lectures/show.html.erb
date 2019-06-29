@@ -6,5 +6,5 @@
   <li>Day     : <%= @lecture[:day]%></li>
   <li>Period  : <%= @lecture[:period] %></li>
   <!-- lectures/review/講義のid レビューに飛ぶ(仮設置)-->
-  <li>レビュー: <%= link_to "詳細" ,"/lectures/review/" + @lecture[:id] %></li>  
+  <li>レビュー: <%= link_to "詳細" ,"/lectures/review/" + @lecture[:id].to_s %></li>  
 </ul>
