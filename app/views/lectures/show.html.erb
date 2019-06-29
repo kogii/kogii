@@ -1,8 +1,10 @@
+<!-- 講義情報ページ とりあえずidを元にデータを列挙しただけ-->
 <h2><%= @lecture[:name] %></h2>
 <ul>
   <li>Term    : <%= @lecture[:term] %></li>
   <li>Genre   : <%= @lecture[:genre] %>
   <li>Day     : <%= @lecture[:day]%></li>
   <li>Period  : <%= @lecture[:period] %></li>
-  <li>レビュー: <%= link_to "詳細" ,"/lectures/review/" + @lecture[:name] %></li> 
+  <!-- lectures/review/講義のid レビューに飛ぶ(仮設置)-->
+  <li>レビュー: <%= link_to "詳細" ,"/lectures/review/" + @lecture[:id] %></li>  
 </ul>

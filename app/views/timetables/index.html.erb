@@ -65,7 +65,8 @@
           <%= monday.name %>
           <%= monday.term %>
           <%= monday.genre %>
-          <%= link_to "詳細" ,"/lectures/show/" + monday.id.to_s %>
+          <!-- /lectures/show/講義のid 講義情報ページに飛ぶ 以下同じ -->
+          <%= link_to "詳細" ,"/lectures/show/" + monday.id.to_s %>  
           </span></div>
       <% end %>
     </li>
