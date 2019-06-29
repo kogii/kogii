@@ -1,6 +1,6 @@
 class LecturesController < ApplicationController
-    def show
-        @lecture = Timetable.find_by(:id => params[:id]) #idをもとにデータベースから講義情報を持ってくる
-
+    def index
+        @user_id = user.id # ユーザidを取得
+        @lectures = UserTimetable.where(user_id:, user_id) #idをもとにデータベースから講義情報を持ってくる
     end
 end
