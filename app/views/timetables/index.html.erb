@@ -13,47 +13,15 @@
     </tr>
   </thead>
   <tbody>
+  <% for i in 1..5 do %>
     <tr>
-    <%= @lecture_data %>
-      <th>1</th>
-      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
+      <th><%= i %></th>
+      <% for j in 1..5 do %>
+        <td label="上のth要素"><p><%= @table[i-1][j-1] %></p></td>
+      <% end %>
     </tr>
-    <tr>
-      <th>2</th>
-      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td label="上のth要素1"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素2"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素3"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素4"><p>ここに時間割を入れる</p></td>
-      <td label="上のth要素5"><p>ここに時間割を入れる</p></td>
-    </tr>
+  <% end %>
+
   </tbody>
 </table>
 
