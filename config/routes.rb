@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'timetables/index'
+  get 'timetables/index/:id' => 'timetables#index'
+  #get 'timetables/index'
   get 'posts/index'
   get 'password_resets/new'
   get 'password_resets/edit'

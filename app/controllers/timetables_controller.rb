@@ -6,5 +6,9 @@ class TimetablesController < ApplicationController
     @wednesdays = Timetable.where(day: 'Wednesday')
     @thursdays = Timetable.where(day: 'Thursday')
     @fridays = Timetable.where(day: 'Friday')
+
+    @user = User.find(params[:id])
   end
+
+
 end

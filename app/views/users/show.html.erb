@@ -1,7 +1,7 @@
 <% provide(:title, @user.name) %>
 <div class="row">
     <aside class="col-md-4">
-        <section class="user_info">          
+        <section class="user_info">
             <h1>
                 <%= form_for(@user, url: yield(:url)) do |f| %>
                     <%= @user.name %>
@@ -16,6 +16,5 @@
     </aside>
 </div>
 
-<h1><a href='/timetables/index'>芝浦工業大学 時間割</a></h1>
 
-
+<h1><%= link_to "芝浦工業大学　時間割" ,"/timetables/index/" +@user.id.to_s %></h1>
