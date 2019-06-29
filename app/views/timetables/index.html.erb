@@ -66,6 +66,8 @@
           <%= monday.term %>
           <%= monday.genre %>
           <%= monday.period %>時限目
+          <!-- /lectures/show/講義のid 講義情報ページに飛ぶ 以下同じ -->
+          <%= link_to "詳細" ,"/lectures/show/" + monday.id.to_s %>  
         </span></div>
       <% end %>
   </li>
@@ -77,6 +79,7 @@
           <%= tuesday.term %>
           <%= tuesday.genre %>
           <%= tuesday.period %>時限目
+          <%= link_to "詳細" ,"/lectures/show/" + tuesday.id.to_s %>
         </span></div>
       <% end %>
   </li>
@@ -88,6 +91,7 @@
           <%= wednesday.term %>
           <%= wednesday.genre %>
           <%= wednesday.period %>時限目
+          <%= link_to "詳細" ,"/lectures/show/" + wednesday.id.to_s %>
           </span></div>
       <% end %>
     </li>
@@ -99,6 +103,7 @@
           <%= thursday.term %>
           <%= thursday.genre %>
           <%= thursday.period %>時限目
+          <%= link_to "詳細" ,"/lectures/show/" + thursday.id.to_s %>
           </span></div>
       <% end %>
     </li>
@@ -110,6 +115,7 @@
           <%= friday.term %>
           <%= friday.genre %>
           <%= friday.period %>時限目
+          <%= link_to "詳細" ,"/lectures/show/" + friday.id.to_s %>
           </span></div>
       <% end %>
     </li>
