@@ -49,5 +49,10 @@ class TimetablesController < ApplicationController
     return table
   end
 
+  def update
+    user_id = @current_user.id # ユーザidを取得
+    UserTimetable.create(user_id: user_id, lecture_id: params[:lecture_id])
+    redirect_to("/timetables/index")
+  end
 
 end
