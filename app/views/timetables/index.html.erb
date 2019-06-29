@@ -58,36 +58,39 @@
 
 
 <ul class="collapsible expandable">
-    <li>
-      <div class="collapsible-header"></i>月曜日</div>
-      <% @mondays.each do |monday| %>
-        <div class="collapsible-body"><span>
+  <li>
+    <div class="collapsible-header"></i>月曜日</div>
+    <% @mondays.each do |monday| %>
+      <div class="collapsible-body"><span>
           <%= monday.name %>
           <%= monday.term %>
           <%= monday.genre %>
+          <%= monday.period %>時限目
           <!-- /lectures/show/講義のid 講義情報ページに飛ぶ 以下同じ -->
           <%= link_to "詳細" ,"/lectures/show/" + monday.id.to_s %>  
-          </span></div>
+        </span></div>
       <% end %>
-    </li>
-    <li>
-      <div class="collapsible-header"></i>火曜日</div>
-      <% @tuesdays.each do |tuesday| %>
-        <div class="collapsible-body"><span>
+  </li>
+  <li>
+    <div class="collapsible-header"></i>火曜日</div>
+    <% @tuesdays.each do |tuesday| %>
+      <div class="collapsible-body"><span>
           <%= tuesday.name %>
           <%= tuesday.term %>
           <%= tuesday.genre %>
+          <%= tuesday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + tuesday.id.to_s %>
-          </span></div>
+        </span></div>
       <% end %>
-    </li>
-    <li>
-      <div class="collapsible-header"></i>水曜日</div>
-      <% @wednesdays.each do |wednesday| %>
-        <div class="collapsible-body"><span>
+  </li>
+  <li>
+    <div class="collapsible-header"></i>水曜日</div>
+    <% @wednesdays.each do |wednesday| %>
+      <div class="collapsible-body"><span>
           <%= wednesday.name %>
           <%= wednesday.term %>
           <%= wednesday.genre %>
+          <%= wednesday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + wednesday.id.to_s %>
           </span></div>
       <% end %>
@@ -99,6 +102,7 @@
           <%= thursday.name %>
           <%= thursday.term %>
           <%= thursday.genre %>
+          <%= thursday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + thursday.id.to_s %>
           </span></div>
       <% end %>
@@ -110,6 +114,7 @@
           <%= friday.name %>
           <%= friday.term %>
           <%= friday.genre %>
+          <%= friday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + friday.id.to_s %>
           </span></div>
       <% end %>
