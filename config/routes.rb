@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'reviews/index'
-  get 'reviews/show'
-  get 'reviews/new'
-  post "reviews" => "reviews#show"
   get 'timetables/index'
   get 'timetables/index/update' => "timetables#update"
   get 'timetables/index/delete' => "timetables#delete"
@@ -28,5 +24,6 @@ Rails.application.routes.draw do
   get 'reviews/show/:id/new' => 'reviews#new'
   post "reviews" => "reviews#create"
   delete "reviews.:id" => "reviews#destroy"
-  get "reviews/:id/edit" => "reviews#edit"
+  get "reviews/:id/edit" => "reviews#edit" 
+
 end

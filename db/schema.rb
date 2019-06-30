@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_06_29_043616) do
-=======
-ActiveRecord::Schema.define(version: 2019_06_26_141614) do
->>>>>>> 662c8d396c54a44fdfd14e91ff58b272e729c70a
+ActiveRecord::Schema.define(version: 2019_06_29_055459) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -49,11 +45,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_141614) do
   end
 
   create_table "reviews", force: :cascade do |t|
-<<<<<<< HEAD
     t.integer "kogiid"
-=======
-    t.float "rate"
->>>>>>> 662c8d396c54a44fdfd14e91ff58b272e729c70a
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
@@ -70,7 +62,6 @@ ActiveRecord::Schema.define(version: 2019_06_26_141614) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "user_timetables", force: :cascade do |t|
     t.integer "user_id"
     t.integer "lecture_id"
@@ -78,8 +69,6 @@ ActiveRecord::Schema.define(version: 2019_06_26_141614) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 662c8d396c54a44fdfd14e91ff58b272e729c70a
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -93,10 +82,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_141614) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
-<<<<<<< HEAD
     t.string "image"
-=======
->>>>>>> 662c8d396c54a44fdfd14e91ff58b272e729c70a
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
