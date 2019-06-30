@@ -26,10 +26,9 @@ class ReviewsController < ApplicationController
     def destroy
         #@review = Timetable.find_by(:id => params[:id])
         
-        #lectureのidではなくreviewのidをとってきてしまう。
         @review = Review.find_by(params[:id])
         @review.destroy
-        redirect_to '/reviews/show/'+ @review[:id].to_s
+        redirect_to '/reviews/show/'+ @review.kogiid.to_s
 
     end
 end
