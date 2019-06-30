@@ -16,5 +16,8 @@
 
 // materializecssをインポートする
 @import "materialize/components/color-variables";
-$primary-color: color("blue", "lighten-2") !default;
+
+$primary-color: color("brown", "lighten-2") !default;
+$secondary-color: color("yellow", "base") !default;
+
 @import "materialize";
