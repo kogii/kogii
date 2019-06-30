@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-<<<<<<< HEAD
     def show
         @review = Timetable.find_by(:id => params[:id]) #idをもとにデータベースから講義情報を持ってくる
         @reviews = Review.all
@@ -34,23 +33,3 @@ class ReviewsController < ApplicationController
 
     end
 end
-=======
-  def index
-    @reviews = review.all
-  end
-
-  def show
-  end
-
-  def new
-  end
-
-  def create
-    @review = Review.new
-    @review.title = params[:review][:title]
-    @review.content = params[:review][:content]
-    @review.save
-    redirect_to '/reviews/index'
-  end
-end
->>>>>>> 662c8d396c54a44fdfd14e91ff58b272e729c70a
