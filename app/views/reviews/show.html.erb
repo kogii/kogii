@@ -1,0 +1,24 @@
+<h2><%= @review[:name] %>のレビュー</h2>
+<%= link_to "レビューを書き込む" ,"/reviews/show/" + @review[:id].to_s + "/new/" %>
+<%= link_to "詳細へ戻る" ,"/lectures/show/" + @review[:id].to_s %>
+<br>
+<br>
+
+<% @reviews.each do |review| %> 
+  <% if review.kogiid == @review[:id] %> 
+    <hr>
+    <p>
+      <strong>タイトル：</strong>
+      <%= review.title %>
+      <br>
+      <%= review.content %>
+      <!-- あとで消す 
+      <br>
+      授業コード:<%= review.kogiid%>
+       ここまで -->
+    </p>
+    <%= link_to '編集', reviews_edit_path(review) %>
+    <%= link_to '削除', reviews_path(review),
+                method: :delete, data: { confirm: '削除しますか？' } %>
+  <% end %>
+<% end %>
