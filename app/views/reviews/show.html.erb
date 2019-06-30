@@ -17,7 +17,7 @@
       授業コード:<%= review.kogiid%>
        ここまで -->
     </p>
-    <%= link_to '編集', reviews_edit_path(review) %>
+    <%#<%= link_to '編集', reviews_edit_path(review) %>
     <%= link_to '削除', reviews_path(review),
                 method: :delete, data: { confirm: '削除しますか？' } %>
   <% end %>
