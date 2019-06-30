@@ -12,6 +12,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
     padding-top: 100px;
+    background-color: #FAE5F6;
 }
 
 section {
@@ -61,10 +62,13 @@ h2 {
     color: $gray-darker;
 }
 
-img {
+.center img {
     vertical-align: bottom;
-    font-size: 4.0em;
-    line-height: 2.0em;
+    background-size: cover;
+    background-image: url(“top.jpg”);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 /* header */
@@ -110,6 +114,9 @@ footer {
             float: left;
             margin-left: 15px;
         }
+    }
+    .body{
+    //   background-color: #FAE5F6;
     }
 }
 
