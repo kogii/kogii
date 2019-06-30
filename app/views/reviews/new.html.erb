@@ -17,16 +17,27 @@
   <% end %> 
   -->
   
+  <!--　タイトル　-->
   <p>
     <%= f.label :title, "タイトル" %><br>
     <%= f.text_field :title %>
   </p>
- 
+
+  <!-- 評価 -->
+  <div class="field" id="star">
+    <%= f.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
+    <%= f.hidden_field :rate, id: :review_star %>
+  </div>
+
+  
+
+  <!-- 内容　-->
   <p>
     <%= f.label :content, "内容" %><br>
     <%= f.text_area :content, cols: 60, rows: 8 %>
   </p>
 
+  <!-- 講義コード -->
   <%= f.hidden_field :kogiid, value:(request.fullpath).to_s.gsub(/[^\d]/, "") %>
   <p>
 
@@ -37,3 +48,14 @@
 
 <%= link_to "レビュー一覧に戻る" ,"/reviews/show/" + @review[:id].to_s %>
 
+  <!-- 評価javascript -->
+  <script>
+  $('#star').raty({
+    size     : 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    scoreName: 'review[rate]',
+    half: true,
+  });
+  </script>  

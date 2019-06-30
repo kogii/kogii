@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
 
         @new_review = Review.new
         @new_review.kogiid = params[:review][:kogiid]
+        @new_review.rate = params[:review][:rate]
         @new_review.title = params[:review][:title]
         @new_review.content = params[:review][:content]
         @new_review.save
