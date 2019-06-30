@@ -5,7 +5,7 @@ class TimetablesController < ApplicationController
     @current_user = User.find_by(id: session[:user_id])
   end
 
-  def index
+   def index
     @timetables = Timetable.all
     @mondays = Timetable.where(day: 'Monday')
     @tuesdays = Timetable.where(day: 'Tuesday')
@@ -26,6 +26,7 @@ class TimetablesController < ApplicationController
     @table = make_table(@lecture_data) # 時間割の表を作成
 
   end
+
 
   def convert(day)
     if day == "Monday" then
@@ -51,7 +52,20 @@ class TimetablesController < ApplicationController
 
   def update
     user_id = @current_user.id # ユーザidを取得
+    #UserTimetable.create(user_id: user_id, lecture_id: params[:lecture_id])
     UserTimetable.create(user_id: user_id, lecture_id: params[:lecture_id])
+    redirect_to("/timetables/index")
+  end
+
+  def delete
+    user_id = @current_user.id # ユーザidを取得
+    lectures = UserTimetable.where(user_id: user_id) #idをもとにデータベースから講義情報を持ってくる
+    #削除する講義がDBに存在しているかどうか判定
+    delete_lecture = lectures.find_by(lecture_id: params[:lecture_id])
+    if delete_lecture.nil? then
+    else
+      delete_lecture.destroy
+    end
     redirect_to("/timetables/index")
   end
 

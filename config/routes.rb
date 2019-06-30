@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'timetables/index'
   get 'timetables/index/update' => "timetables#update"
+  get 'timetables/index/delete' => "timetables#delete"
   get 'posts/index'
   get 'password_resets/new'
   get 'password_resets/edit'
