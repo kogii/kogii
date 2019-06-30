@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'reviews/index'
+  get 'reviews/show'
+  get 'reviews/new'
+  post "reviews" => "reviews#show"
   get 'timetables/index'
   get 'timetables/index/update' => "timetables#update"
   get 'timetables/index/delete' => "timetables#delete"
