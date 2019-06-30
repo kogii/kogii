@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
     def destroy
         #@review = Timetable.find_by(:id => params[:id])
         
-        @review = Review.find_by(params[:id])
+        @review = Review.find_by(id: params[:id])
         @review.destroy
         redirect_to '/reviews/show/'+ @review.kogiid.to_s
 
