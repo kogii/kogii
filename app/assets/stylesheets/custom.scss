@@ -13,6 +13,9 @@ $gray-medium-light: #eaeaea;
 body {
     padding-top: 100px;
     background-color: #FAE5F6;
+    background-image: url("top.jpg");
+    background-size: cover;
+
 }
 
 section {
@@ -41,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 6em;
     letter-spacing: -2px;
     margin-bottom: 120px;
     text-align: center;
@@ -49,12 +52,12 @@ h1 {
 }
 
 .center h1 {
-    color: white;
+    color: rgb(200, 238, 97);
     margin-bottom: 80px;
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 2.4em;
     letter-spacing: -1px;
     margin-bottom: 30px;
     text-align: center;
@@ -75,9 +78,9 @@ h2 {
 
 #logo {
     float: left;
-    margin-right: 10px;
+    margin-right: 4px;
     font-size: 1.7em;
-    color: #fff;
+    color: rgb(247, 233, 45);
     text-transform: -1px;
     padding-top: 9px;
     font-weight: bold;
@@ -85,6 +88,10 @@ h2 {
         color: #fff;
         text-decoration: none;
     }
+}
+#links {
+    color: rgb(247, 233, 45);
+    font-size: 1.2em;
 }
 
 /* img {
@@ -219,4 +226,9 @@ input {
         padding: 10px 0;
         border-bottom: 1px solid $gray-lighter;
     }
+}
+
+.box {
+    width: 100%;
+    height: 100%;
 }

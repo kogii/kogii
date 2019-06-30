@@ -37,7 +37,8 @@
           <%= monday.period %>時限目
           <!-- /lectures/show/講義のid 講義情報ページに飛ぶ 以下同じ -->
           <%= link_to "詳細" ,"/lectures/show/" + monday.id.to_s %>  
-          <%= button_to "この授業を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: monday.id }} %>
+          <%= button_to "#{monday.name}を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: monday.id }} %>
+          <%= button_to "#{monday.name}を削除", {controller: 'timetables', action: 'delete'}, {method: :get, params:{lecture_id: monday.id }} %>
         </span></div>
       <% end %>
   </li>
@@ -50,7 +51,8 @@
           <%= tuesday.genre %>
           <%= tuesday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + tuesday.id.to_s %>
-          <%= button_to "この授業を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: tuesday.id }} %>
+          <%= button_to "#{tuesday.name}を追加",{controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: tuesday.id }} %>
+          <%= button_to "#{tuesday.name}を削除", {controller: 'timetables', action: 'delete'}, {method: :get, params:{lecture_id: tuesday.id }} %>
         </span></div>
       <% end %>
   </li>
@@ -63,7 +65,8 @@
           <%= wednesday.genre %>
           <%= wednesday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + wednesday.id.to_s %>
-          <%= button_to "この授業を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: wednesday.id }} %>
+          <%= button_to "#{wednesday.name}を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: wednesday.id }} %>
+          <%= button_to "#{wednesday.name}を削除", {controller: 'timetables', action: 'delete'}, {method: :get, params:{lecture_id: wednesday.id }} %>
           </span></div>
       <% end %>
     </li>
@@ -76,7 +79,8 @@
           <%= thursday.genre %>
           <%= thursday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + thursday.id.to_s %>
-          <%= button_to "この授業を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: thursday.id }} %>
+          <%= button_to "#{thursday.name}を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: thursday.id }} %>
+          <%= button_to "#{thursday.name}を削除", {controller: 'timetables', action: 'delete'}, {method: :get, params:{lecture_id: thursday.id }} %>
           </span></div>
       <% end %>
     </li>
@@ -89,7 +93,8 @@
           <%= friday.genre %>
           <%= friday.period %>時限目
           <%= link_to "詳細" ,"/lectures/show/" + friday.id.to_s %>
-          <%= button_to "この授業を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: friday.id }} %>
+          <%= button_to "#{friday.name}を追加", {controller: 'timetables', action: 'update'}, {method: :get, params:{lecture_id: friday.id }} %>
+          <%= button_to "#{friday.name}を削除", {controller: 'timetables', action: 'delete'}, {method: :get, params:{lecture_id: friday.id }} %>
           </span></div>
       <% end %>
     </li>

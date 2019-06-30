@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'timetables/index'
   get 'timetables/index/update' => "timetables#update"
+  get 'timetables/index/delete' => "timetables#delete"
   get 'posts/index'
   get 'password_resets/new'
   get 'password_resets/edit'
@@ -18,5 +19,11 @@ Rails.application.routes.draw do
     resources :users
     resources :account_activations, only: [:edit]
     resources :password_resets,     only: [:new, :create, :edit, :update]
-    get 'lectures/show/:id' => 'lectures#show'
-  end
+  get 'lectures/show/:id' => 'lectures#show'
+  get 'reviews/show/:id' => 'reviews#show'
+  get 'reviews/show/:id/new' => 'reviews#new'
+  post "reviews" => "reviews#create"
+  delete "reviews.:id" => "reviews#destroy"
+  get "reviews/:id/edit" => "reviews#edit" 
+
+end

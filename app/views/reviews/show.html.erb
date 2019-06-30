@@ -1,0 +1,40 @@
+<h2><%= @review[:name] %>のレビュー</h2>
+<%= link_to "レビューを書き込む" ,"/reviews/show/" + @review[:id].to_s + "/new/" %>
+<%= link_to "詳細へ戻る" ,"/lectures/show/" + @review[:id].to_s %>
+<br>
+<br>
+
+<% @reviews.each do |review| %> 
+  <% if review.kogiid == @review[:id] %> 
+    <hr>
+    <p>
+      <strong>タイトル：</strong>
+      <%= review.title %>
+
+      <!--星評価-->
+        <div id="star-rate-<%= review.id %>"></div>
+          <script>
+          $('#star-rate-<%= review.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= review.rate %>,
+          });
+          </script>  
+      <!--/星評価-->
+
+      <br>
+      <%= review.content %>
+      <!-- あとで消す 
+      <br>
+      授業コード:<%= review.kogiid%>
+       ここまで --> 
+    </p>
+    <%#<%= link_to ('編集', "/reviews/#{@reviews.id}/edit") %>
+    <%= link_to 'レビューを削除', reviews_path(review),
+                method: :delete, data: { confirm: '削除しますか？' } %>
+  <% end %>
+<% end %>
