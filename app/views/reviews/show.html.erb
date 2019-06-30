@@ -10,6 +10,22 @@
     <p>
       <strong>タイトル：</strong>
       <%= review.title %>
+
+      <!--星評価-->
+        <div id="star-rate-<%= review.id %>"></div>
+          <script>
+          $('#star-rate-<%= review.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
+            readOnly: true,
+            score: <%= review.rate %>,
+          });
+          </script>  
+      <!--/星評価-->
+
       <br>
       <%= review.content %>
       <!-- あとで消す 
@@ -18,7 +34,7 @@
        ここまで --> 
     </p>
     <%#<%= link_to ('編集', "/reviews/#{@reviews.id}/edit") %>
-    <%= link_to '削除', reviews_path(review),
+    <%= link_to 'レビューを削除', reviews_path(review),
                 method: :delete, data: { confirm: '削除しますか？' } %>
   <% end %>
 <% end %>
