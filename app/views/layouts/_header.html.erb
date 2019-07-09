@@ -1,6 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-        <%= link_to "マイスケジュール", timetables_index_path , id: "logo" %>
+		<% if logged_in? %>
+        	<%= link_to "マイスケジュール", timetables_index_path , id: "logo" %>
+		<% end %>
         <nav>
             <ul class="nav navbar-nav navbar-right">
                 <li style="background-color:black" colspan="2"><%= link_to "ホーム", root_path %></li>
